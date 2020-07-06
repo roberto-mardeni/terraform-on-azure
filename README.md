@@ -10,12 +10,12 @@ Use the included setup.sh script to create all the prerequisites for this sample
 
 Use the service principal details to log into Azure, `az login --service-principal -u <service_principal_name> -p "<service_principal_password>" --tenant "<service_principal_tenant>"`
 
-Replace the **access_key** placeholder in the **main.tf** file with the output from the **setup.sh** script
+Replace both the **storage_account_name** & **access_key** properties in the **main.tf** file with the output from the **setup.sh** script
 
 Let's now run the terraform commands:
 
 ```console
-terraform init
+terraform init -reconfigure
 terraform plan -var-file="local.tfvars" -var 'environment=dev' -out=plan
 terraform apply plan
 terraform destroy -var-file="local.tfvars" -var 'environment=dev'
