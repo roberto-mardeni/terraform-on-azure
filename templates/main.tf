@@ -1,28 +1,10 @@
 terraform {
   backend "azurerm" {
     resource_group_name   = "terraform-on-azure"
-    storage_account_name  = "tstate177"
+    storage_account_name  = "tstate"
     container_name        = "tstate"
     key                   = "<access_key>"
   }
-}
-
-variable "environment" {
-  type = string
-  default = "none"
-}
-
-variable "location" {
-  type = string
-  default = "eastus"
-}
-
-variable "resource_group_name" {
-  type = string
-}
-
-variable "address_space" {
-  type = list(string)
 }
 
 provider "azurerm" {
@@ -31,6 +13,7 @@ provider "azurerm" {
 
 module "network" {
   source              = "Azure/network/azurerm"
+  version             = "3.0.0"
   resource_group_name = var.resource_group_name
   vnet_name           = join("-", ["terraform", "vnet"])
   address_space       = var.address_space
