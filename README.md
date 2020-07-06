@@ -16,9 +16,9 @@ Let's now run the terraform commands:
 
 ```console
 terraform init -reconfigure
-terraform plan -var-file="local.tfvars" -var 'environment=dev' -out=plan
+terraform plan -var-file="local.tfvars" -var "environment=dev" -out=plan
 terraform apply plan
-terraform destroy -var-file="local.tfvars" -var 'environment=dev'
+terraform destroy -var-file="local.tfvars" -var "environment=dev"
 ```
 
 This sample showcases the following Terraform concepts:
