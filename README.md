@@ -4,7 +4,12 @@ Demonstrates using Terraform on Azure
 
 ## Prerequisites
 
-Use the included setup.sh script to create all the prerequisites for this sample, you can run it in the [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview).
+Use the included setup.sh script to create all the prerequisites for this sample, you can run it in the [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) after you have changed its permissions, like:
+
+```console
+chmod 700 setup.sh
+./setup.sh
+```
 
 ## Usage
 
