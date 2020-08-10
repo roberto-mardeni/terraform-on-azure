@@ -1,0 +1,1 @@
+seq 10 | parallel -j 2 --workdir $PWD ./test.sh $1
