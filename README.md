@@ -1,6 +1,6 @@
 # terraform-on-azure
 
-Demonstrates using Terraform on Azure
+Demonstrates using Terraform on Azure using basic concepts like variables, functions, third party modules and custom modules
 
 ## Prerequisites
 
@@ -20,6 +20,7 @@ Replace both the **storage_account_name** & **access_key** properties in the **m
 Let's now run the terraform commands:
 
 ```console
+cd templates/basics/
 terraform init -reconfigure
 terraform plan -var-file="local.tfvars" -var "environment=dev" -out=plan
 terraform apply plan
