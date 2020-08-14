@@ -57,5 +57,4 @@ module "group2" {
   resource_group_name   = azurerm_resource_group.example.name
   instances             = 2
   subnet_address_prefix = "10.0.1.0/24"
-  wait_for              = [ module.group1.vmss_id ]
 }
